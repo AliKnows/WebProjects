@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ALI YOU KNOW OFICIAL/CONTACTOS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body{
+            background-image:url(imagen/psico.gif);
+        background-size:800px;       }
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+    <center>
+  <div class="container">
+      <div class="row">
+         
+          <div class="col-xs-2" ><center><img src="imagen/Logo.png"  width="80%"style="padding=15%" ></center> 
+             </div>
+          <div class="col-xs-8">
+        <img src="imagen/cabecera.png"   width="110%">
+          </div>
+          <div class="col-xs-2">
+
+            
+             </div>
+          
+      </div>
+     
+      <div class="row">
+         <nav class="navbar navbar-inverse">
+          <ul class="nav nav-pills">
+  <li role="presentation" ><a href="Main.html">Menú</a></li>
+  <li role="presentation"><a href="INFORMACION.html">INFORMACION</a></li>
+  <li role="presentation" class="active"><a href="CONTACTOS.html">CONTACTOS</a></li>
+</ul>
+          
+  
+</nav >    
+     
+     <div class="row">
+        <div  class="col-xs-12"><div class="alert alert-danger" role="alert">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  <span class="sr-only">Bienvenido al lugar mas secreto de la web:</span>
+  Bienvenido al lugar mas secreto de la web:
+</div></div>
+</div>
+    <div class="row">  <img src="imagen/aliAStete.png" alt="https://www.facebook.com/AliYouKnowOFICIAL" width="50%">
+    </div>
+    <div>
+        <h1>                --------   </h1>
+        <h1>           -----------        </h1>
+        <h1 style="background:rgba(7, 2, 2, 0.775); color: aliceblue;">CONTACTOS</h1>
+      
+
+    </div>
+
+    <div>
+        <form>
+            <div class="form-group">
+                <label for="name" style="background:rgba( 238, 83, 83, 0.775 ); color: aliceblue;">Nombre:</label>
+                <input type="text" class="form-control" id="name" placeholder="Ingrese su nombre">
+            </div>
+            <div class="form-group">
+                <label for="dob" style="background:rgba( 238, 83, 83, 0.775 ); color: aliceblue;">Fecha de Nacimiento:</label>
+                <input type="date" class="form-control" id="dob">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+       <!-- parte del escruip para calcular -->
+        <script>
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = document.getElementById('name').value;
+                const dob = new Date(document.getElementById('dob').value);
+                const ageDifMs = Date.now() - dob.getTime();
+                const ageDate = new Date(ageDifMs);
+                const age = Math.abs(ageDate.getUTCFullYear() - 1970);
+
+                const resultDiv = document.createElement('div');
+                resultDiv.className = 'alert alert-info';
+                resultDiv.innerHTML = `<strong>Nombre:</strong> ${name} <br> <strong>Edad:</strong> ${age} años`;
+                document.querySelector('form').appendChild(resultDiv);
+            });
+        </script>
+
+    </div>
+    
+   
+     
+     
+    
+     
+      <div class="row" style="padding:10%"> 
+          <div class="col-xs-4"><h4 style="background:rgba( 238, 83, 83, 0.775 ); color: aliceblue;">CONTACTOS:</h4>
+          
+          <p style="background:lightgreen">TELEFONO: +51 937 750 033</p>
+          <p style="background:lightgreen">EMAIL: alicho2001@gmail</p>
+          <p style="background:lightgreen">DIRECCION: AV.LA CULTURA/506</p></div>
+          <div class="col-xs-4">
+          </div>
+           <div class="col-xs-4"> <a href="https://web.facebook.com/ZenAfros/notifications/"><img src="imagen/redes-sociales/facebook.png" height="50px" ></a>
+          <img src="imagen/redes-sociales/youtube.PNG" height="50px"  >
+           <img src="imagen/redes-sociales/instagram.PNG" height="50px" ></div>
+      </div>
+  </div>
+  <div>
+   <table bgcolor="#eeeeee" width="100%">
+		<tr style="color: aliceblue">
+			<td>
+				Copyright: Ali You Know.com.pe<br>
+				Telefono: +51 084 232322
+			</td>
+			<td width="300px">facebook: ALIYOUKNOW@facebook.com<br>
+			twitter: ALIYOUKNOW@twitter.com<br>
+			instagram: ALIYOUKNOW@instagram.com<br></td>
+		</tr>
+	</table>
+
+    </div>
+    
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+        </div>
+   </center>
+</body>
+</html>
